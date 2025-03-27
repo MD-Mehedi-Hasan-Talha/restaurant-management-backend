@@ -1,21 +1,28 @@
 const express = require('express');
 const router = express.Router();
 
-// Home route
-router.get('/', (req, res) => {
-  res.json({ 
-    success: true,
-    message: 'Welcome to Restaurant Management API',
-    version: '1.0.0'
-  });
-});
+// Import feature routes
+const restaurantsRouter = require('./restaurants');
+const menusRouter = require('./menus');
+const usersRouter = require('./users');
+const restaurantOwnersRouter = require('./restaurantOwners');
+const paymentMethodsRouter = require('./paymentMethods');
+const ordersRouter = require('./orders');
+const cartsRouter = require('./carts');
+const reviewsRouter = require('./reviews');
+const settingsRouter = require('./settings');
+const couponsRouter = require('./coupons');
 
-// Health check endpoint
-router.get('/health', (req, res) => {
-  res.json({
-    status: 'UP',
-    timestamp: new Date().toISOString()
-  });
-});
+// Mount feature routes
+router.use('/restaurants', restaurantsRouter);
+router.use('/menus', menusRouter);
+router.use('/users', usersRouter);
+router.use('/restaurant-owners', restaurantOwnersRouter);
+router.use('/payment-methods', paymentMethodsRouter);
+router.use('/orders', ordersRouter);
+router.use('/carts', cartsRouter);
+router.use('/reviews', reviewsRouter);
+router.use('/settings', settingsRouter);
+router.use('/coupons', couponsRouter);
 
 module.exports = router;
