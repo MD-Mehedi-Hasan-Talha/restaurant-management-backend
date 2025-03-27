@@ -1,8 +1,6 @@
 const { gql } = require("graphql-tag");
 
 const Review = gql`
-  scalar Date
-
   type Review {
     id: ID!
     rating: Int!

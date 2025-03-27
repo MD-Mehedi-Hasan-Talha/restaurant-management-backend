@@ -5,6 +5,11 @@ const OrderItem = gql`
     menu: ID!
     quantity: Int!
   }
+
+  input OrderItemInput {
+    menu: ID!
+    quantity: Int!
+  }
 `;
 
 module.exports = OrderItem;

@@ -1,8 +1,6 @@
 const { gql } = require("graphql-tag");
 
 const RestaurantOwner = gql`
-  scalar Date
-
   type RestaurantOwner {
     id: ID!
     userId: ID!

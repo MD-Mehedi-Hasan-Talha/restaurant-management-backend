@@ -1,8 +1,6 @@
 const { gql } = require("graphql-tag");
 
 const Restaurant = gql`
-  scalar Date
-
   type DeliveryTime {
     min: Int!
     max: Int!

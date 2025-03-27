@@ -3,7 +3,6 @@ const OrderItem = require("./OrderItem");
 
 const Order = gql`
   ${OrderItem}
-  scalar Date
 
   type Order {
     id: ID!
@@ -25,11 +24,6 @@ const Order = gql`
   input OrderUpdateInput {
     status: String
     deliveryTime: Int
-  }
-
-  input OrderItemInput {
-    menu: ID!
-    quantity: Int!
   }
 `;
 

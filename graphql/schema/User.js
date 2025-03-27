@@ -1,17 +1,16 @@
 const { gql } = require("graphql-tag");
 
 const User = gql`
-  scalar Date
-
   type User {
     id: ID!
     name: String!
     bio: String
     avatar: String
     email: String!
-    password: String!
+    password: String
     address: String
     phone: String
+    role: String
     createdAt: Date!
     updatedAt: Date!
   }
@@ -24,6 +23,7 @@ const User = gql`
     password: String!
     address: String
     phone: String
+    role: String
   }
 
   input UserUpdateInput {
@@ -34,6 +34,7 @@ const User = gql`
     password: String
     address: String
     phone: String
+    role: String
   }
 
   input UserLoginInput {

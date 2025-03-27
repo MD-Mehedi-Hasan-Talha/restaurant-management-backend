@@ -1,8 +1,6 @@
 const { gql } = require("graphql-tag");
 
 const Settings = gql`
-  scalar Date
-
   type Settings {
     id: ID!
     restaurantId: ID!

@@ -1,8 +1,6 @@
 const { gql } = require("graphql-tag");
 
 const Menu = gql`
-  scalar Date
-
   type Menu {
     id: ID!
     name: String!
